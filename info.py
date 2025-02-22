@@ -1,7 +1,7 @@
-API_ID = "YOUR_API_ID"
-API_HASH = "YOUR_API_HASH"
-BOT_TOKEN = "YOUR_BOT_TOKEN"
-CHANNEL_ID = -100XXXXXXXXX  # Private Telegram channel ID
+API_ID = "16531092"
+API_HASH = "b073b97bd4c8c56616fc2cbbd4da845a"
+BOT_TOKEN = "7524524705:AAH7aBrV5cAZNRFIx3ZZhO72kbi4tjNd8lI"
+CHANNEL_ID = -1002440398569  # Private Telegram channel ID
 
 SKY_MOVIES_URL = "https://skymovieshd.video/"
 CHECK_INTERVAL = 300  # 5 minutes (300 seconds)
