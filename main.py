@@ -5,9 +5,9 @@ from pyrogram import Client
 import re
 
 # ✅ Telegram UserBot Configuration
-API_ID = "YOUR_API_ID"  
-API_HASH = "YOUR_API_HASH"  
-CHAT_ID = "YOUR_PRIVATE_CHANNEL_ID"  # Private Telegram Channel
+API_ID = "16531092"  
+API_HASH = "b073b97bd4c8c56616fc2cbbd4da845a"  
+CHAT_ID = "7524524705:AAH7aBrV5cAZNRFIx3ZZhO72kbi4tjNd8lI"  # Private Telegram Channel
 
 # ✅ Pyrogram UserBot (Sessionless)
 app = Client("userbot", api_id=API_ID, api_hash=API_HASH)
