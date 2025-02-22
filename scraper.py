@@ -1,13 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+from info import HEADERS
 
 BASE_URL = "https://skymovieshd.video/"
 HOWBLOGS_PATTERN = re.compile(r'https://howblogs\.xyz/\S+')
 
 def get_latest_movies():
     """Scrapes the latest uploaded movies from skymovieshd.video"""
-    response = requests.get(BASE_URL)
+    response = requests.get(BASE_URL, headers=HEADERS)
     if response.status_code != 200:
         return []
     
@@ -17,7 +18,7 @@ def get_latest_movies():
 
 def get_howblogs_link(movie_url):
     """Extracts howblogs.xyz link from the movie page"""
-    response = requests.get(movie_url)
+    response = requests.get(movie_url, headers=HEADERS)
     if response.status_code != 200:
         return None
     
@@ -26,7 +27,7 @@ def get_howblogs_link(movie_url):
 
 def get_hubdrive_link(howblogs_url):
     """Finds hubdrive.dad link from howblogs.xyz page"""
-    response = requests.get(howblogs_url)
+    response = requests.get(howblogs_url, headers=HEADERS)
     if response.status_code != 200:
         return None
     
@@ -38,7 +39,7 @@ def get_hubdrive_link(howblogs_url):
 
 def get_final_download_link(hubdrive_url):
     """Extracts the final download link from hubdrive.dad"""
-    response = requests.get(hubdrive_url)
+    response = requests.get(hubdrive_url, headers=HEADERS)
     if response.status_code != 200:
         return None
     
